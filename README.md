@@ -2,15 +2,15 @@
 ## Project Summary
 We propose a method for constructing finite fields whose order is a combination, ***n choose k***. 
 We call these ***combinatorial finite fields***. 
-Combinatorial finite fields allow for the construction of ***combinatorial groups***. 
+We believe combinatorial finite fields allow for the construction of ***combinatorial groups***. 
 These are commutative mathematical structures with well defined 
 group operations, just like elliptic curves.
 These combinatorial groups
 are important because they provide extremely fast and extremely secure hash constructions.
-We aim to provide a fast alternative to elliptic curve cryptography in the [Pedersen Hash](https://iden3-docs.readthedocs.io/en/latest/iden3_repos/research/publications/zkproof-standards-workshop-2/pedersen-hash/pedersen.html)
+The goal of combinatorial finite field cryptography is to provide a fast alternative to elliptic curve cryptography in the [Pedersen Hash](https://iden3-docs.readthedocs.io/en/latest/iden3_repos/research/publications/zkproof-standards-workshop-2/pedersen-hash/pedersen.html)
 and fast constructions of [zero knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof#Practical_examples).
 \
-This proposal seeks to fund research on the properties of combinatorial finite fields.
+This proposal seeks to fund research on the properties of combinatorial finite fields. In this document, we present the mathematical background needed to construct combinatorial finite fields.
 
 ### A Friendly Introduction to Finite Fields
 Finite fields are beautiful mathematical structures used in cryptography, data transmission, computer circuit design and even the clock in your home.
