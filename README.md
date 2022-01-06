@@ -29,8 +29,21 @@ A combination *n choose k* is the number of ways you can choose k elements from 
 integers as a sum of binomial coefficients. 
 - ***Combinatorial finite field*** - a finite field whose order is a binomial coefficient.
 
-### Summary
+### Technical Summary
 - We introduce a numeral system based on binomial coefficients.
-- We define fast group operations within the number system based on binomial coefficients.
-- We present an analog to the discrete logarithm problem using binomial coefficents.
+- We show how to construct a combinatorial finite field.
+- We present the relationship between between the combinatorial number system and bitmaps.
 
+
+### Introduction to the combinatorial number system
+Any natural number ***N*** can be uniquely written a sum of binomial coefficients. This is called the combinatorial representation of an integer
+and this numeral system is called the combinatorial number system.
+This combinatorial number system provides a bijection between the natural numbers and integer sequences.
+This means that we can create lexicographic orderings of integer sequences. This branch of mathematics is called [enumerative combinatorics](https://en.wikipedia.org/wiki/Enumerative_combinatorics).
+The combinatorial number system is important because it allows us to represent integer sequences [strictly increasing](https://en.wikipedia.org/wiki/Monotonic_function) as natural numbers. 
+\
+[This](http://math0.wvstateu.edu/~baker/cs405/code/Combinadics.html) greedy algorithm is used to find the combinatorial representation of an integer.
+\
+1. Find the largest binomial coefficient such that ![akChoosek](https://raw.githubusercontent.com/PostingsCompress/PostingsWebsite/main/akChooseKleqN.png)
+2. Subtract to find the residue ![NminusAkChoosek](https://raw.githubusercontent.com/PostingsCompress/PostingsWebsite/main/NMinusBinomial.png)
+3. Find the largest binomial coefficient such that ![Repeat](https://raw.githubusercontent.com/PostingsCompress/PostingsWebsite/main/repeat.png)
