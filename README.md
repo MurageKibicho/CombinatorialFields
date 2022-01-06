@@ -43,7 +43,17 @@ This means that we can create lexicographic orderings of integer sequences. This
 The combinatorial number system is important because it allows us to represent integer sequences [strictly increasing](https://en.wikipedia.org/wiki/Monotonic_function) as natural numbers. 
 \
 [This](http://math0.wvstateu.edu/~baker/cs405/code/Combinadics.html) greedy algorithm is used to find the combinatorial representation of an integer.
-\
+
 1. Find the largest binomial coefficient such that ![akChoosek](https://raw.githubusercontent.com/PostingsCompress/PostingsWebsite/main/akChooseKleqN.png)
 2. Subtract to find the residue ![NminusAkChoosek](https://raw.githubusercontent.com/PostingsCompress/PostingsWebsite/main/NMinusBinomial.png)
 3. Find the largest binomial coefficient such that ![Repeat](https://raw.githubusercontent.com/PostingsCompress/PostingsWebsite/main/repeat.png)
+
+#### **Example:** Find the combinatorial representation of ![n63K4](https://raw.githubusercontent.com/PostingsCompress/PostingsWebsite/main/n63K4.png)
+![Convert to Binomial](https://raw.githubusercontent.com/PostingsCompress/PostingsWebsite/main/conversionToBinomials.png)
+\
+To **reverse** the process, sum your list of binomial coefficients
+\
+![Sum](https://raw.githubusercontent.com/PostingsCompress/PostingsWebsite/main/sum130.png)
+
+### Constructing Combinatorial Finite Fields
+
