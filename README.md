@@ -9,6 +9,8 @@ These combinatorial groups
 are important because they provide extremely fast and extremely secure hash constructions.
 We aim to provide a fast alternative to elliptic curve cryptography in the [Pedersen Hash](https://iden3-docs.readthedocs.io/en/latest/iden3_repos/research/publications/zkproof-standards-workshop-2/pedersen-hash/pedersen.html)
 and fast constructions of [zero knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof#Practical_examples).
+\
+This proposal seeks to fund research on the properties of combinatorial finite fields.
 
 ### A Friendly Introduction to Finite Fields
 Finite fields are beautiful mathematical structures used in cryptography, data transmission, computer circuit design and even the clock in your home.
@@ -33,7 +35,7 @@ integers as a sum of binomial coefficients.
 - We introduce a numeral system based on binomial coefficients.
 - We introduce bitmaps and show their relationship to integer sequences.
 - We show how to construct a combinatorial finite field.
-- We present interesting properties of combinatorial finite fields.
+- We present our research goals.
 
 
 ### Introduction to the combinatorial number system
@@ -81,10 +83,15 @@ A combinatorial finite field is a finite field whose order is a binomial coeffic
 *0* to *n choose k*. This is insignificant on its own.
 
 As mentioned before, the combinatorial number system offers a bijection between the natural numbers and integer sequences. Also, as shown in the 
-previous section, bitmaps offer a bitwise representation of integer sequences. Therfore, we can construct combinatorial fields as ordered sets of bitmaps.
+previous section, bitmaps offer a bitwise representation of integer sequences. Therefore, we can construct combinatorial fields as ordered sets of bitmaps.
+
+#### Algorithm
+For every integer less than *n choose k*:
+- Find the combinatorial representation of the integer.
+- Convert the combinatorial representation into an bitmap.
+
 
 ### **Example:** Construct the Combinatorial field of order (5 choose 3)
-Note that *(5 choose 3)* equals 10, so the order of our finite field is 10
   - 0: 11100
   - 1: 11010
   - 2: 10110
@@ -95,4 +102,13 @@ Note that *(5 choose 3)* equals 10, so the order of our finite field is 10
   - 7: 10011
   - 8: 01011
   - 9: 00111
+#### Interesting properties of combinatorial finite fields
+- They are symmetric along the middle element of the field.ie (In the example, element 0 is a reflection of element 9)
+- They form a boolean algebra. This is necessary for the construction of ***combinatorial groups*** because [every boolean algebra is a group](http://www.markability.net/group.htm#:~:text=of%20a%20finite%20Boolean%20Algebra,of%20associativity%2C%20identity%20and%20invertibility.&text=(iv)%20that%20the%20inverse%20of%20any%20given%20element%20is%20unique.)
+ 
+ ### Research Goals
+ Our goal is to develop the mathematics needed to work with combinatorial finite fields. Specifically, we need to figure out if it is possible to construct
+ groups whose order is a prime number. We also aim to define a combinatorial analog to the discrete logarithm problem. This is necessary for cryptographic applications.
+ \
+ Ultimately, we want to find out if we can make secure cryptographic hashes that can be verified extremely fast.
 
