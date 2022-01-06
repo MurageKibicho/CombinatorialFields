@@ -85,14 +85,14 @@ previous section, bitmaps offer a bitwise representation of integer sequences. T
 
 ### **Example:** Construct the Combinatorial field of order (5 choose 3)
 Note that *(5 choose 3)* equals 10, so the order of our finite field is 10
-  0: 11100
-  1: 11010
-  2: 10110
-  3: 01110
-  4: 11001
-  5: 10101
-  6: 01101
-  7: 10011
-  8: 01011
-  9: 00111
+  - 0: 11100
+  - 1: 11010
+  - 2: 10110
+  - 3: 01110
+  - 4: 11001
+  - 5: 10101
+  - 6: 01101
+  - 7: 10011
+  - 8: 01011
+  - 9: 00111
 
