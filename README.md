@@ -31,8 +31,9 @@ integers as a sum of binomial coefficients.
 
 ### Technical Summary
 - We introduce a numeral system based on binomial coefficients.
+- We introduce bitmaps and show their relationship to integer sequences.
 - We show how to construct a combinatorial finite field.
-- We present the relationship between between the combinatorial number system and bitmaps.
+- We present interesting properties of combinatorial finite fields.
 
 
 ### Introduction to the combinatorial number system
@@ -55,5 +56,30 @@ To **reverse** the process, sum your list of binomial coefficients
 \
 ![Sum](https://raw.githubusercontent.com/PostingsCompress/PostingsWebsite/main/sum130.png)
 
-### Constructing Combinatorial Finite Fields
+### Introduction to Bitmaps
+Bitmaps are data structures used in search engines for extremely fast indexing. The data structure offers extremely fast 
+operations becasue a bitmap is an array of bits. 
+\
+For example, (0,1,0,1) is a bitmap
+with 4 elements. Assuming the leftmost bit is at index 0, then this bitmap has true boolean values at index 1 and index 3.
+\
+Bitmaps are used in search engines because they provide a convenient representation of integer sequences. 
+To convert an integer sequence into a bitmap,
+- Create an empty bit array whose length is equal to 1+ the value of the largest integer in the sequence.
+- Set true the element of the bit array corresponding to each integer in the sequence.
 
+### **Example:** Find the bitmap representation of the sequence 2,4,6,7
+- Create an array of length 8, : {0,0,0,0,0,0,0}
+- Set index 7 to true: {0,0,0,0,0,0,0,1}
+- Set index 6 to true: {0,0,0,0,0,0,1,1}
+- Set index 4 to true: {0,0,0,0,1,0,1,1}
+- Set index 2 to true: {0,0,1,0,1,0,1,1}
+Therefore ***2,4,6,7*** is equivalent to the bitmap ***{0,0,1,0,1,0,1,1}***
+
+### Why ar bitmap
+
+
+
+### Constructing Combinatorial Finite Fields
+A combinatorial finite field is a finite field whose order is a binomial coefficient. The simplest construction is enumerating the set of integers from
+*0* to *n choose k*.
