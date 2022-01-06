@@ -3,12 +3,12 @@
 We propose a method for constructing finite fields whose order is a combination, ***n choose k***. 
 We call these ***combinatorial finite fields***. 
 Combinatorial finite fields allow for the construction of ***combinatorial groups***. 
-These are commutative mathematical groups with well defined 
+These are commutative mathematical structures with well defined 
 group operations, just like elliptic curves.
 These combinatorial groups
 are important because they provide extremely fast and extremely secure hash constructions.
-We aim to provide a faster alternative to elliptic curve cryptography in the [Pedersen Hash](https://iden3-docs.readthedocs.io/en/latest/iden3_repos/research/publications/zkproof-standards-workshop-2/pedersen-hash/pedersen.html)
-and faster constructions of [zero knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof#Practical_examples).
+We aim to provide a fast alternative to elliptic curve cryptography in the [Pedersen Hash](https://iden3-docs.readthedocs.io/en/latest/iden3_repos/research/publications/zkproof-standards-workshop-2/pedersen-hash/pedersen.html)
+and fast constructions of [zero knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof#Practical_examples).
 
 ### A Friendly Introduction to Finite Fields
 Finite fields are beautiful mathematical structures used in cryptography, data transmission, computer circuit design and even the clock in your home.
@@ -76,10 +76,23 @@ To convert an integer sequence into a bitmap,
 - Set index 2 to true: {0,0,1,0,1,0,1,1}
 Therefore ***2,4,6,7*** is equivalent to the bitmap ***{0,0,1,0,1,0,1,1}***
 
-### Why ar bitmap
-
-
-
 ### Constructing Combinatorial Finite Fields
 A combinatorial finite field is a finite field whose order is a binomial coefficient. The simplest construction is enumerating the set of integers from
-*0* to *n choose k*.
+*0* to *n choose k*. This is insignificant on its own.
+
+As mentioned before, the combinatorial number system offers a bijection between the natural numbers and integer sequences. Also, as shown in the 
+previous section, bitmaps offer a bitwise representation of integer sequences. Therfore, we can construct combinatorial fields as ordered sets of bitmaps.
+
+### **Example:** Construct the Combinatorial field of order (5 choose 3)
+Note that *(5 choose 3)* equals 10, so the order of our finite field is 10
+  0: 11100
+  1: 11010
+  2: 10110
+  3: 01110
+  4: 11001
+  5: 10101
+  6: 01101
+  7: 10011
+  8: 01011
+  9: 00111
+
